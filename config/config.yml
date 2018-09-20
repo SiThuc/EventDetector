@@ -1,0 +1,40 @@
+---
+file:
+    input:
+        raw_tweets: ../data
+        cleaned_tweets: ../data/cleaned_tweets.csv
+        classified_tweets: ../data/classified_tweets.csv
+        trainingtweets: ../data/disaster-tweets_CrowFlowd.csv
+        
+hubseek:
+    run: True
+    epsilon: 0.005
+    bandwidth: 
+        - 1.0
+    eta:
+        - 0.5
+    evalBandwidth: true
+    evalEpsilon: true
+    minSup: 10
+
+clustream:
+    numInitTweets: 2000
+    pRestart: 0.2
+    errorBound: 0.000001
+    numInitClusters: 10
+    numMaxClusters: 200
+    numTweetPeriod: 2000
+    outdatedThreshold: 432000
+    calcVicinity: false
+
+query:
+    querypoints:
+        - 7200
+    refWindowSize: 432000
+    update: true
+    updateWindow:
+        - 900
+
+timespan:
+    init: 7200
+    update: 600
