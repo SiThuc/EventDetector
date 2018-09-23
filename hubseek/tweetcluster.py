@@ -66,11 +66,8 @@ class TweetCluster(object):
         self._tfIdf[entity] = val
 
     def __str__(self):
-        s = "# Cluster Score:" + str(self._score) + "\n"
-        s += "Num of Tweets:" + str(len(self._members)) + "\n"
+        s = "Num of Tweets:" + str(len(self._members)) + "\n"
         s += "Center Tweet ID:" + str(self._center.getTweetId()) + "\n"
-        #for e in self._members:
-        #    s += e.__str__() + "\n"
         return s
 
     def toJson(self):
