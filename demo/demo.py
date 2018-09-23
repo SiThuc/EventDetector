@@ -176,7 +176,7 @@ class Demo(object):
                     self._clustream.printStats()
 
 
-        #writer.close()
+        writer.close()
 
         end = time.time()
 
@@ -214,6 +214,8 @@ class Demo(object):
             print("Starting Hubseek process.....")
             refSpanTime = self._config["query"]["refWindowSize"]
             detector.detect(tdb, bandwidth, epsilon, minSup, refSpanTime, eta)
+            print("THE INTERFACE IS CREATED, PLEASE RUN THE INTEFACE MODULE!!!")
+            time.sleep(60)
             detector.printStats()
         return detector
 
@@ -275,7 +277,8 @@ class Demo(object):
         events = self._detector.rank(clusters, bandwidth, refSpanTime)
         print("There are %d events in online step"%len(events))
 
-        output = '../output/output_' + str(currentTd.getStartTimestamp())+'_'+str(currentTd.getEndTimestamp())+'.json'
+        #output2 = '../output/output_' + str(currentTd.getStartTimestamp())+'_'+str(currentTd.getEndTimestamp())+'.json'
+        output = '../output/live/output.json'
         data = []
         for clus in events:
             sub = clus.toJson()
@@ -285,7 +288,7 @@ class Demo(object):
             json.dump(data, f)
         f.close()
 
-        for clus in clusters:
+        for clus in events:
             print(clus.__str__())
             print("################################")
         print("Online Hubseek generating candidates done!!!")
@@ -312,8 +315,6 @@ class Demo(object):
     def main(self):
         paraFile = "../config/config.yml"
         self.init(paraFile)
-        #self.runBatch()
-        # self.runOnlilne()
 
 if __name__ == "__main__":
     dm = Demo()
