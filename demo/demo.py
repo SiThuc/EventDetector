@@ -276,9 +276,9 @@ class Demo(object):
         self._detector.setTD(currentTd)
         events = self._detector.rank(clusters, bandwidth, refSpanTime)
         print("There are %d events in online step"%len(events))
-
-        #output2 = '../output/output_' + str(currentTd.getStartTimestamp())+'_'+str(currentTd.getEndTimestamp())+'.json'
+        
         output = '../output/live/output.json'
+        #output2 = '../output/output_' + str(currentTd.getStartTimestamp())+'_'+str(currentTd.getEndTimestamp())+'.json'
         data = []
         for clus in events:
             sub = clus.toJson()
