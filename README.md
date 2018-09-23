@@ -3,5 +3,5 @@ This is a project which implements a framework for detecting disaster events fro
 This project has 3 parts:
   - Part 1: The classsification
   - Part 2: Events detector
-  - Part 3: Interface
+  - Part 3: Interface module
  
