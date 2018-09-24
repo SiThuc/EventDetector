@@ -25,7 +25,7 @@ Open the demo folder and run the demo.py. When the terminal displays "THE INTERF
 
 Step 3: 
 
-Open browser and access: 127.0.0.1:8050.
+Open your browser and access the address: 127.0.0.1:8050.
 The interface module is going to display all disaster events from the U.S.A, and it will update automatically when the event detector catches up new events.
 
 Thanks,
