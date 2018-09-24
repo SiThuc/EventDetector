@@ -20,7 +20,7 @@ We will choose the first file, because its accuracy = 0.9507 compared with 0.940
 
 Step 2:
 
-Paste .hdf5 and tokenizer.pickle into the classifier folder.
+Paste the .hdf5 and tokenizer.pickle into the classifier folder.
 Open the demo folder and run the demo.py. When the terminal displays "THE INTERFACE IS CREATED, PLEASE RUN THE INTERFACE MODULE!!!",  please run the maps.py in the same folder.
 
 Step 3: 
